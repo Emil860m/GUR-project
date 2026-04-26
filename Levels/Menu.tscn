@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bvd50l4vwkgg1"]
+[gd_scene format=3 uid="uid://bvd50l4vwkgg1"]
 
 [ext_resource type="Texture2D" uid="uid://cw8vyw3so7a1j" path="res://assets/sprites/ui_background.png" id="1_ajojk"]
 [ext_resource type="Script" uid="uid://djofoe4nv22qt" path="res://Levels/menuUI.gd" id="1_k1aj7"]
@@ -10,12 +10,15 @@
 [ext_resource type="Texture2D" uid="uid://dmisgprpox3qo" path="res://assets/sprites/UI_Logo.png" id="7_so85s"]
 [ext_resource type="Texture2D" uid="uid://jeo83i2ct4sq" path="res://assets/sprites/UI_Control.png" id="9_j0r6d"]
 
-[node name="Menu" type="CanvasLayer"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j0r6d"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Menu" type="CanvasLayer" unique_id=1124900027]
 process_mode = 3
 layer = 100
 script = ExtResource("1_k1aj7")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=566194030]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,14 +26,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1375396534]
 visible = false
 layout_mode = 0
 offset_right = 1919.0
 offset_bottom = 1079.0
 texture = ExtResource("9_j0r6d")
 
-[node name="MarginContainer" type="MarginContainer" parent="Control"]
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=991715151]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
@@ -39,30 +42,30 @@ theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 120
 theme_override_constants/margin_bottom = 80
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer" unique_id=1276666290]
 layout_mode = 2
 
-[node name="Sprite2D2" type="Sprite2D" parent="Control/MarginContainer/HBoxContainer"]
+[node name="Sprite2D2" type="Sprite2D" parent="Control/MarginContainer/HBoxContainer" unique_id=983339522]
 position = Vector2(324, 458)
 scale = Vector2(1.04, 1.04)
 texture = ExtResource("1_ajojk")
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/MarginContainer/HBoxContainer"]
+[node name="Sprite2D" type="Sprite2D" parent="Control/MarginContainer/HBoxContainer" unique_id=1771878406]
 position = Vector2(422, 461)
 scale = Vector2(1.0278311, 1.0278311)
 texture = ExtResource("2_k1aj7")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/HBoxContainer" unique_id=1120389036]
 layout_mode = 2
 size_flags_vertical = 8
 
-[node name="playButton" type="TextureButton" parent="Control/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="playButton" type="TextureButton" parent="Control/MarginContainer/HBoxContainer/VBoxContainer" unique_id=957009450]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("3_j0r6d")
 
-[node name="Label" type="Label" parent="Control/MarginContainer/HBoxContainer/VBoxContainer/playButton"]
+[node name="Label" type="Label" parent="Control/MarginContainer/HBoxContainer/VBoxContainer/playButton" unique_id=1318181469]
 layout_mode = 0
 offset_left = 56.0
 offset_top = 24.0
@@ -77,13 +80,13 @@ text = "Play"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ControlsButton" type="TextureButton" parent="Control/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="ControlsButton" type="TextureButton" parent="Control/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1104587917]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("5_qm8e0")
 
-[node name="Label" type="Label" parent="Control/MarginContainer/HBoxContainer/VBoxContainer/ControlsButton"]
+[node name="Label" type="Label" parent="Control/MarginContainer/HBoxContainer/VBoxContainer/ControlsButton" unique_id=428215285]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 23.0
@@ -98,13 +101,13 @@ text = "Controls"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="quitButton" type="TextureButton" parent="Control/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="quitButton" type="TextureButton" parent="Control/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1251067821]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("5_qm8e0")
 
-[node name="Label" type="Label" parent="Control/MarginContainer/HBoxContainer/VBoxContainer/quitButton"]
+[node name="Label" type="Label" parent="Control/MarginContainer/HBoxContainer/VBoxContainer/quitButton" unique_id=991461519]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 23.0
@@ -119,15 +122,38 @@ text = "Quit"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Sprite2D3" type="Sprite2D" parent="Control/MarginContainer/HBoxContainer"]
+[node name="Sprite2D3" type="Sprite2D" parent="Control/MarginContainer/HBoxContainer" unique_id=589524781]
 position = Vector2(300.00003, 189)
 scale = Vector2(0.84610116, 0.84610116)
 texture = ExtResource("6_wilrv")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Control/MarginContainer/HBoxContainer"]
+[node name="Sprite2D4" type="Sprite2D" parent="Control/MarginContainer/HBoxContainer" unique_id=1923929458]
 position = Vector2(343, 178)
 scale = Vector2(0.9600018, 0.9600018)
 texture = ExtResource("7_so85s")
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Control/MarginContainer/HBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/MarginContainer/HBoxContainer" unique_id=426913409]
 layout_mode = 2
+
+[node name="TextEdit" type="TextEdit" parent="Control" unique_id=943254463]
+z_index = 1000
+layout_mode = 0
+offset_left = 489.0
+offset_top = 234.0
+offset_right = 1546.0
+offset_bottom = 743.0
+theme_override_colors/search_result_color = Color(0.00093636644, 0.00093636644, 0.00093636644, 1)
+theme_override_colors/background_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+placeholder_text = "Enter player number given by the tester"
+
+[node name="Button" type="Button" parent="Control/TextEdit" unique_id=1061342739]
+layout_mode = 0
+offset_left = 323.0
+offset_top = 562.0
+offset_right = 698.0
+offset_bottom = 656.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_j0r6d")
+text = "OK"
+
+[connection signal="button_up" from="Control/TextEdit/Button" to="." method="_on_testee_number_button_up"]

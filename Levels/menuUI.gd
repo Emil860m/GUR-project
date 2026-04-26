@@ -4,6 +4,7 @@ extends CanvasLayer
 @onready var controls_button: TextureButton = $Control/MarginContainer/HBoxContainer/VBoxContainer/ControlsButton
 @onready var quit_button: TextureButton = $Control/MarginContainer/HBoxContainer/VBoxContainer/quitButton
 @onready var controls: TextureRect = $Control/TextureRect
+@onready var test_name_input := $Control/TextEdit
 var ui_disabled = false
 
 func _process(delta: float) -> void:
@@ -27,4 +28,13 @@ func _press_controls():
 	controls.visible = not controls.visible
 	
 func _press_quit():
-	get_tree().quit(0)
+	Talo.events.flush()
+	get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)
+	
+
+
+
+func _on_testee_number_button_up() -> void:
+	if not test_name_input.text == "":
+		test_name_input.visible = false
+		Talo.players.identify("test_service", test_name_input.text)
