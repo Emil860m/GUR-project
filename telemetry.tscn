@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bghc2gyn5nm76"]
+
+[ext_resource type="Script" uid="uid://cjmy2arioc0ou" path="res://telemetry.gd" id="1_07o6i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gmgs0"]
+size = Vector2(466, 243)
+
+[node name="Telemetry" type="Area2D" unique_id=1775734462]
+collision_mask = 2
+script = ExtResource("1_07o6i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=548977766]
+shape = SubResource("RectangleShape2D_gmgs0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
