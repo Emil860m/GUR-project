@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://dve8hfghfvdfr"]
+[gd_scene format=3 uid="uid://dve8hfghfvdfr"]
 
 [ext_resource type="Script" uid="uid://xqq4q7ftp7cv" path="res://player/player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://c3t68dnfner8e" path="res://player/sprites/005_Sprite_Player.png" id="3_2ieo8"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://0jrvs8a0bfnu" path="res://assets/sprites/UI_0002_Layer-19.png" id="15_65viv"]
 [ext_resource type="Texture2D" uid="uid://b3ocxes7it3ri" path="res://assets/background.png" id="17_tqiix"]
 [ext_resource type="AudioStream" uid="uid://cu2sg3fiq14ay" path="res://assets/sounds/Land.wav" id="18_e7oew"]
+[ext_resource type="PackedScene" uid="uid://drn661sfu7umq" path="res://interactable/coin_ui.tscn" id="18_uw77l"]
 [ext_resource type="AudioStream" uid="uid://cq55k4jw3wywk" path="res://assets/sounds/meow1.ogg" id="21_7pqkx"]
 [ext_resource type="AudioStream" uid="uid://birybbc7t3sdd" path="res://assets/sounds/Player Death.wav" id="21_bjvpn"]
 [ext_resource type="AudioStream" uid="uid://spfkw40bqcgl" path="res://assets/sounds/meow2.ogg" id="22_uw77l"]
@@ -172,7 +173,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("footsteps_sound", "jump_sound1", "jump_sound2", "land_sound", "damage_sound", "death_sound")]
+[node name="Player" type="CharacterBody2D" unique_id=1486246457 node_paths=PackedStringArray("footsteps_sound", "jump_sound1", "jump_sound2", "land_sound", "damage_sound", "death_sound")]
 z_index = 11
 collision_layer = 2
 script = ExtResource("1_onrkg")
@@ -183,36 +184,36 @@ land_sound = NodePath("LandSound")
 damage_sound = NodePath("Hiss1")
 death_sound = NodePath("DeathSound")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=917695270]
 shape = SubResource("CapsuleShape2D_sh265")
 
-[node name="InputController" parent="." instance=ExtResource("4_hqtel")]
+[node name="InputController" parent="." unique_id=439210458 instance=ExtResource("4_hqtel")]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1241844144]
 position = Vector2(0, -50)
 sprite_frames = SubResource("SpriteFrames_i3pqv")
 animation = &"idle_left"
 autoplay = "idle_left"
 
-[node name="AnimationController" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("5_sweqy")]
+[node name="AnimationController" parent="." unique_id=1765517311 node_paths=PackedStringArray("sprite") instance=ExtResource("5_sweqy")]
 sprite = NodePath("../AnimatedSprite2D")
 
-[node name="MovementComponent" parent="." instance=ExtResource("6_g6k8r")]
+[node name="MovementComponent" parent="." unique_id=56542305 instance=ExtResource("6_g6k8r")]
 ground_deacc = 256.0
 air_deacc = 48.0
 
-[node name="Gravity" parent="." instance=ExtResource("6_boad6")]
+[node name="Gravity" parent="." unique_id=1483593460 instance=ExtResource("6_boad6")]
 
-[node name="Gun" parent="." instance=ExtResource("7_boad6")]
+[node name="Gun" parent="." unique_id=850948156 instance=ExtResource("7_boad6")]
 z_index = -1
 position = Vector2(-47, -44)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2012709205]
 script = ExtResource("8_hg6s5")
 player_path = NodePath("..")
 gun_path = NodePath("../Gun")
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=643046205]
 modulate = Color(1, 1, 1, 0.84705883)
 position = Vector2(376.00003, 116)
 rotation = -0.019339742
@@ -220,7 +221,7 @@ scale = Vector2(1.1563593, 1.1563593)
 texture = ExtResource("10_s7qer")
 flip_v = true
 
-[node name="RevolverCylinderUI" type="Control" parent="CanvasLayer"]
+[node name="RevolverCylinderUI" type="Control" parent="CanvasLayer" unique_id=69976859]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 97.63522
@@ -234,7 +235,7 @@ cylinder_background = ExtResource("11_bjvpn")
 outer_radius = 335.0
 gap_from_edge = 150.0
 
-[node name="ReloadBar" type="Control" parent="CanvasLayer"]
+[node name="ReloadBar" type="Control" parent="CanvasLayer" unique_id=1165180217]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 670.0
@@ -248,7 +249,7 @@ gun_path = NodePath("../../Gun")
 size_px = Vector2i(66, 9)
 border_px = 3
 
-[node name="HealthUI" type="HBoxContainer" parent="CanvasLayer"]
+[node name="HealthUI" type="HBoxContainer" parent="CanvasLayer" unique_id=1456259942]
 offset_left = 196.0
 offset_top = 53.0
 offset_right = 235.99998
@@ -259,41 +260,48 @@ heart_full_texture = ExtResource("13_c35mf")
 heart_half_texture = ExtResource("14_65viv")
 heart_empty_texture = ExtResource("15_65viv")
 
-[node name="SoundComponent" type="Node" parent="."]
+[node name="CoinUI" parent="CanvasLayer" unique_id=1397546482 instance=ExtResource("18_uw77l")]
+offset_left = 781.0
+offset_top = 69.0
+offset_right = 1016.0
+offset_bottom = 209.0
+scale = Vector2(0.510395, 0.510395)
+
+[node name="SoundComponent" type="Node" parent="." unique_id=752945254]
 script = ExtResource("11_ebec5")
 
-[node name="FootstepsSound" type="AudioStreamPlayer" parent="."]
+[node name="FootstepsSound" type="AudioStreamPlayer" parent="." unique_id=853219299]
 stream = ExtResource("12_yllr7")
 volume_db = -15.0
 pitch_scale = 1.5
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="." unique_id=1929889483]
 modulate = Color(0.09265783, 1.4439226e-07, 0.53407574, 1)
 z_index = -1500
 position = Vector2(714.00006, -2647)
 scale = Vector2(11.539583, 10.906019)
 texture = ExtResource("17_tqiix")
 
-[node name="JumpSound" type="AudioStreamPlayer" parent="."]
+[node name="JumpSound" type="AudioStreamPlayer" parent="." unique_id=974545269]
 volume_db = -15.0
 
-[node name="Meow1" type="AudioStreamPlayer" parent="."]
+[node name="Meow1" type="AudioStreamPlayer" parent="." unique_id=936119051]
 stream = ExtResource("21_7pqkx")
 
-[node name="Meow2" type="AudioStreamPlayer" parent="."]
+[node name="Meow2" type="AudioStreamPlayer" parent="." unique_id=1876490211]
 stream = ExtResource("22_uw77l")
 
-[node name="LandSound" type="AudioStreamPlayer" parent="."]
+[node name="LandSound" type="AudioStreamPlayer" parent="." unique_id=2077687559]
 stream = ExtResource("18_e7oew")
 volume_db = -15.0
 
-[node name="Hiss1" type="AudioStreamPlayer" parent="."]
+[node name="Hiss1" type="AudioStreamPlayer" parent="." unique_id=969166440]
 stream = ExtResource("23_knn7v")
 
-[node name="DeathSound" type="AudioStreamPlayer" parent="."]
+[node name="DeathSound" type="AudioStreamPlayer" parent="." unique_id=1131921710]
 stream = ExtResource("21_bjvpn")
 volume_db = -15.0
 
-[node name="BcgMusic" type="AudioStreamPlayer" parent="."]
+[node name="BcgMusic" type="AudioStreamPlayer" parent="." unique_id=266254999]
 stream = ExtResource("24_g4c7l")
 autoplay = true

@@ -28,6 +28,7 @@ PlayerVariables="*res://Globals/PlayerVariables.tscn"
 Camera="*res://player/Camera.tscn"
 Menu="*res://Levels/Menu.tscn"
 Talo="*uid://bpmdn8oc34pg7"
+CoinManager="*uid://b0jiabmjlwm2x"
 
 [display]
 
