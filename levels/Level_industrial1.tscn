@@ -29,8 +29,10 @@
 [ext_resource type="PackedScene" uid="uid://c5s5kc4fk3snh" path="res://interactable/nextLevelArea.tscn" id="28_vm6l7"]
 [ext_resource type="Texture2D" uid="uid://dvqb2b16pxy0w" path="res://assets/sprites/Layer 18.png" id="29_darc0"]
 [ext_resource type="PackedScene" uid="uid://bghc2gyn5nm76" path="res://telemetry.tscn" id="29_ne0i8"]
+[ext_resource type="PackedScene" uid="uid://rguan4236dfl" path="res://interactable/Coin.tscn" id="30_3l24y"]
 
 [node name="LevelIndustrial1" type="Node2D" unique_id=1635070086]
+metadata/_edit_horizontal_guides_ = [-23636.0, -17446.0]
 
 [node name="Player" parent="." unique_id=550682895 instance=ExtResource("1_k03kb")]
 z_index = 0
@@ -64,33 +66,27 @@ position = Vector2(-7624, -8888)
 rotation = -0.20943952
 
 [node name="Enemy" parent="." unique_id=2070735710 instance=ExtResource("9_4evi8")]
-visible = false
 position = Vector2(-6983, -8960)
 stop_at_edge = false
 patrol_array = Array[Vector2]([Vector2(-638, -8976), Vector2(-6983, -8960)])
 
 [node name="ThrowEnemy" parent="." unique_id=650079177 instance=ExtResource("10_ecy85")]
-visible = false
 position = Vector2(-23561, -18161)
 patrol_array = Array[Vector2]([Vector2(-19611, -18129), Vector2(-23561, -18161)])
 
 [node name="ThrowEnemy2" parent="." unique_id=468923600 instance=ExtResource("10_ecy85")]
-visible = false
 position = Vector2(424, -18844)
 
 [node name="ShieldEnemy" parent="." unique_id=762067410 instance=ExtResource("11_qpv4i")]
-visible = false
 position = Vector2(5744, -19546)
 patrol_array = Array[Vector2]([Vector2(16747, -19575), Vector2(5744, -19546)])
 
 [node name="Enemy2" parent="." unique_id=690075782 instance=ExtResource("9_4evi8")]
-visible = false
 position = Vector2(-31285, -23891)
 stop_at_edge = false
 patrol_array = Array[Vector2]([Vector2(-35220, -23910), Vector2(-26621, -23910)])
 
 [node name="ThrowEnemy3" parent="." unique_id=1023071878 instance=ExtResource("10_ecy85")]
-visible = false
 position = Vector2(-37991, -17734)
 
 [node name="Barrel2" parent="." unique_id=1465936437 instance=ExtResource("7_3eovg")]
@@ -122,7 +118,6 @@ scale = Vector2(0.796875, 0.8203125)
 texture = ExtResource("12_nv2rh")
 
 [node name="Enemy3" parent="." unique_id=382424930 instance=ExtResource("9_4evi8")]
-visible = false
 position = Vector2(-12053, -14424)
 stop_at_edge = false
 patrol_array = Array[Vector2]([Vector2(-8448, -14453), Vector2(-12053, -14424)])
@@ -371,11 +366,9 @@ position = Vector2(-61545, -17696)
 scale = Vector2(0.6, 0.6)
 
 [node name="ThrowEnemy4" parent="." unique_id=1494952299 instance=ExtResource("10_ecy85")]
-visible = false
 position = Vector2(-50590, -33288)
 
 [node name="Enemy4" parent="." unique_id=982107755 instance=ExtResource("9_4evi8")]
-visible = false
 position = Vector2(-66120, -28970)
 patrol_array = Array[Vector2]([Vector2(-63886, -28953), Vector2(-66120, -28970)])
 
@@ -448,7 +441,6 @@ visible = false
 position = Vector2(-80362, -38080)
 
 [node name="ShieldEnemy2" parent="." unique_id=2063871557 instance=ExtResource("11_qpv4i")]
-visible = false
 position = Vector2(-72607, -26232)
 patrol_array = Array[Vector2]([Vector2(-77374, -26173), Vector2(-67771, -26232)])
 
@@ -747,3 +739,93 @@ position = Vector2(-15521, -3887)
 rotation = 1.5707964
 scale = Vector2(3.77, 3.4)
 id = "4"
+
+[node name="Coin" parent="." unique_id=1741687394 instance=ExtResource("30_3l24y")]
+position = Vector2(9165, -8877)
+
+[node name="Coin2" parent="." unique_id=1445523068 instance=ExtResource("30_3l24y")]
+position = Vector2(-4533, -23724.002)
+
+[node name="Coin3" parent="." unique_id=82480150 instance=ExtResource("30_3l24y")]
+position = Vector2(-2769, -23724.002)
+
+[node name="Coin4" parent="." unique_id=622820297 instance=ExtResource("30_3l24y")]
+position = Vector2(-21806, -18111.002)
+
+[node name="Coin5" parent="." unique_id=1813517815 instance=ExtResource("30_3l24y")]
+position = Vector2(-61873, -18183)
+
+[node name="Coin6" parent="." unique_id=1554728132 instance=ExtResource("30_3l24y")]
+position = Vector2(-74765, -41876)
+
+[node name="Coin7" parent="." unique_id=1914608742 instance=ExtResource("30_3l24y")]
+position = Vector2(-75109, -41370)
+
+[node name="Coin8" parent="." unique_id=394960941 instance=ExtResource("30_3l24y")]
+position = Vector2(-74413, -41361)
+
+[node name="Coin9" parent="." unique_id=968712809 instance=ExtResource("30_3l24y")]
+position = Vector2(-40103, -17549)
+
+[node name="Coin10" parent="." unique_id=719880834 instance=ExtResource("30_3l24y")]
+position = Vector2(-33521, -5676.001)
+
+[node name="Coin11" parent="." unique_id=483816885 instance=ExtResource("30_3l24y")]
+position = Vector2(-39276.004, -17541)
+
+[node name="Coin12" parent="." unique_id=669506925 instance=ExtResource("30_3l24y")]
+position = Vector2(18149, -19322)
+
+[node name="Coin13" parent="." unique_id=307511105 instance=ExtResource("30_3l24y")]
+position = Vector2(-72626, -35182)
+
+[node name="Coin14" parent="." unique_id=1741159121 instance=ExtResource("30_3l24y")]
+position = Vector2(-82390, -37867)
+
+[node name="Coin15" parent="." unique_id=1330697030 instance=ExtResource("30_3l24y")]
+position = Vector2(-81425.01, -37867)
+
+[node name="Coin16" parent="." unique_id=378438975 instance=ExtResource("30_3l24y")]
+position = Vector2(-80471.01, -37867)
+
+[node name="Coin17" parent="." unique_id=1215868073 instance=ExtResource("30_3l24y")]
+position = Vector2(-83889, -29455)
+
+[node name="Coin18" parent="." unique_id=2089864258 instance=ExtResource("30_3l24y")]
+position = Vector2(-73983, -25984)
+
+[node name="Coin19" parent="." unique_id=501456473 instance=ExtResource("30_3l24y")]
+position = Vector2(-71219, -25984)
+
+[node name="Coin20" parent="." unique_id=93699759 instance=ExtResource("30_3l24y")]
+position = Vector2(-72647.01, -27735)
+
+[node name="Coin21" parent="." unique_id=730254690 instance=ExtResource("30_3l24y")]
+position = Vector2(-3605, -25011.002)
+
+[node name="Coin22" parent="." unique_id=1863837945 instance=ExtResource("30_3l24y")]
+position = Vector2(-30382, -23695)
+
+[node name="Coin23" parent="." unique_id=1990776784 instance=ExtResource("30_3l24y")]
+position = Vector2(-32237, -23695)
+
+[node name="Coin24" parent="." unique_id=212360778 instance=ExtResource("30_3l24y")]
+position = Vector2(21949, -16096.002)
+
+[node name="Coin25" parent="." unique_id=1339373638 instance=ExtResource("30_3l24y")]
+position = Vector2(21949, -14322.002)
+
+[node name="Coin26" parent="." unique_id=1725088613 instance=ExtResource("30_3l24y")]
+position = Vector2(21949, -12937)
+
+[node name="Coin27" parent="." unique_id=306280265 instance=ExtResource("30_3l24y")]
+position = Vector2(20589, -11163)
+
+[node name="Coin28" parent="." unique_id=1168838419 instance=ExtResource("30_3l24y")]
+position = Vector2(-44554.004, -28673.002)
+
+[node name="Coin29" parent="." unique_id=1996795409 instance=ExtResource("30_3l24y")]
+position = Vector2(-46694.004, -29750.002)
+
+[node name="Coin30" parent="." unique_id=1777001121 instance=ExtResource("30_3l24y")]
+position = Vector2(-46694.004, -14891.001)
