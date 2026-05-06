@@ -816,7 +816,7 @@ position = Vector2(21949, -16096.002)
 position = Vector2(21949, -14322.002)
 
 [node name="Coin26" parent="." unique_id=1725088613 instance=ExtResource("30_3l24y")]
-position = Vector2(21949, -12937)
+position = Vector2(-2527, -14530.001)
 
 [node name="Coin27" parent="." unique_id=306280265 instance=ExtResource("30_3l24y")]
 position = Vector2(20589, -11163)
